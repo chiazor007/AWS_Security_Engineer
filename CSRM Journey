@@ -1,0 +1,79 @@
+New App Onboarding / On-prem Application Migration To Cloud Environment (AWS)
+
+Onboarding a new app or migrating an on-prem application to AWS cloud environment requires a ServiceNow CRM (Cyber Risk Management) ticket submission. The Security Operation team (SOC) and the Initial Risk Assessment (IRA) team will receive a task ticket.
+
+The SOC team conducts an architecture review/cybersecurity app discovery, cloud accreditations (cloud console configuration audit) and, arranges pen-tests, exception, or code scanning if needed.
+
+If the platform or app team that submitted the ticket involves/utilizes a vendor solution, the team and the vendor will need to work with the Third-Party CRM team to receive security approval.
+
+The IRA team sends out an IRA (Initial Risk Assessment) and a Detailed Risk Assessment (DRA) if they determine that it is required after reviewing the IRA. 
+
+Application deployment on-prem would not require going through the cloud accreditations process.
+
+Lastly, final approval will be determined after all security team have completed all security check and in a cases where an exception is needed the platform/app team would have to work with ?
+
+Cybersecurity Risk Management (CSRM) Process:
+
+The Architecture review / Cybersecurity App discovery is the process of reviewing the security posture prior to migration and ensuring all security best practices are being followed. A Solution Architectural Diagram (SAD), if any, would be reviewed by the security team to ensure the security concerns are noted and addressed before deploying any infrastructure in the cloud environment.
+
+General info:
+•	The review is done prior to building the cloud infrastructure.
+•	Typically, the review is done in one meeting (30mins - 1hrs)
+
+What's needed:
+•	Submit a ServiceNow ticket to initiate the CSRM process.
+•	Arch diagram (SAD) that shows components/services/resources that would be deployed.
+•	Cloud account ID: usually a 12-digit number
+
+To schedule/setup the call:
+•	The Cloud Security team will need at least 1 week to prepare for the call.
+
+The turnaround time:
+•	The review is 1-2 hours.
+•	After that, the app team will need to remediate the findings brought up by the Cloud Security team.
+
+
+The Cloud Security Accreditation is a process performed by Cloud security where the Production cloud console/environment configurations are reviewed to ensure security best practices.
+
+General info:
+•	The review is done in the production cloud environment.
+•	All of the resources/infrastructure will need to be stood up in prod for the review.
+•	Typically, the review is done in one meeting (1-2hrs)
+
+What's needed:
+•	Completed Prod environment with all of the resources/infrastructure stood up
+•	Arch diagram that shows deployed components
+•	Prod cloud account ID: usually a 12-digit number
+•	The final go-live date.
+
+To schedule/setup the call:
+•	The Cloud Security team will need at least 1 week to prepare for the call.
+
+The turnaround time:
+•	The review is 1-2 hours.
+•	After that, the app team will need to remediate the findings brought up by the Cloud Security team.
+
+The MPT (Manuel Penetration Test) is a process where the Application Security team completes a penetration test to check the security posture of the application. It is targeted to Staging/ Pre-Prod/QA environments.
+
+General info:
+•	The MPT must be performed against a code complete (pre-prod) environment prior to the app being used in production.
+•	Testing is done in the Staging / Pre-Prod environment.
+
+What's needed:
+•	MPT ServiceNow Request or a request through SOC team.
+•	Completed Staging / Pre-Prod environment.
+•	Credentials for each permission group (User vs Administrator).
+
+The turnaround time:
+•	TBD
+
+DAST (Dynamic Application Security Testing) is a testing process where the Application Security team assess a web application through the front-end to find vulnerabilities through simulated attacks.
+
+How to Request:
+•	TBD
+Requirements are:
+•	TBD
+The turnaround time:
+•	TBD
+
+
