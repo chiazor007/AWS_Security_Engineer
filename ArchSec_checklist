@@ -1,0 +1,27 @@
+Application security architectural meetings are great time to remain teams of security expectations and enterprise standards and the fact that SOC team is here to help them along the way.
+When conducting an architecture security review/discovery, it's important to ensure that the deployed infrastructure follows security best practices and adheres to AWS security standards. 
+Here is a checklist to help you conduct an AWS architecture security review:
+•	Confirm CMDB record is correct.
+•	Review CMDB records like
+o	Data classification
+o	Business criticality
+o	Portfolio
+o	Support Group
+•	Confirm that data classification is set to what should be expected.
+•	Has a data steward been involved to assist with data classification.
+•	Is this a crown jewel?
+•	Overview of the application
+o	How it will work
+o	Who will use it
+o	What type of data it will consume, process, create, and store
+•	Does the support group have information about the application users and involved data.
+•	Are you utilizing OCLC Pipeline (GitLab)
+•	App deployment On-Prem, Cloud or SaaS?
+•	Will there be any integration?
+•	Data Encryption
+•	Network Security
+•	Logging and Monitoring
+•	Accessibility (Public, private, Internal)
+•	If known, what authentication method will be leveraged (SailPoint, ForgeRock, CyberArk, etc)
+•	Do you have a Draft Solution Architecture Diagram (SAD)?
+•	When is the Go-Live-date
