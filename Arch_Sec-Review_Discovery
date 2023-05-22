@@ -1,0 +1,99 @@
+Security Posture
+TMNA Accreditation Team Contact Information
+Architecture Diagram
+ﺴ ........
+Accounts Reviews
+Findingst Summary
+ﺀﺩﺩﺩﺍﺑ
+Critical Risk Findings _.... ......
+Co1: <Finding Descnption>
+:
+High Risk Finding......................
+H-01: <Finding Description>
+Medium Risk Findings
+M-01: <Finding Description?
+Low Risk Findings
+L-01: <Finding Description>
+Open Questions
+
+
+
+CONFIPENTIAL
+Security Posture
+The TMNA Cyber Protection Team determines the securty posture based on the most severe finding that
+directly impacts the business. For additional context, the overall security posture is graded based on the
+is
+criteria listed below
+SECURITY POSTURE
+Security
+Criteria
+Grade
+Excellent The overall security posture was found to be excellent with e minimal amount of low
+D
+and intommational Tisk findings.
+The assessed components were above average when benchmarked against TMNA
+Good
+application base. Only a small amount of lowinformational risk shortcomings were
+dentified in this testing period.
+The security controls observed to be effective and in place at the time of testing
+Fair
+provide a reasonable amount of coverage, but moderate changes are required to
+elevate the overall security posture to to I acceptable standards
+Immediate attention should be given to address vulnerabilities identified in testing.
+Poor
+Inadequate | Shortcomings were identified throughout most of the security controls, and significant
+resources will be required to improve security posture
+B
+TMNA Accreditation Team Contact Information
+Kell Rozman
+Name:
+Senior Manager Cyber Protection
+Title:
+.. kellrozman@toyota.com
+E-mail:_
+Name:
+Title:
+E-mail:
+Orlando Borden
+Consultant, Sec Software Eng
+orlando.borden@toyota.com
+Name:
+Title:
+E-mail:
+General e-mail:
+Kevin Lee
+Sr. Analyst, Sec Software Eng
+kevin.x.lee@toyota.com
+cloud_security@toyota,.com
+
+
+Architecture Diagram
+Add Architecture Diagrams used for accreditation
+Accounts Reviews
+<AWSIGCP\Azure> Account: <add account id, subscription, or project id>
+
+Findings Summary
+Finding Name
+#
+Risk Rating
+Critical
+Status
+<Open/Close>
+<C-01>
+<inding name>
+<inding names
+H-01>
+<M-01>
+<L 1>
+High
+Medium.
+<Open/Close>
+<hnding names
+<Open/Close>
+<finding name>
+<finaing name>
+LOw
+<Open/Close>
+<I01>
+Informational
+<Open/Close>
