@@ -1,0 +1,3 @@
+Amazon Web Services (AWS) is a comprehensive and widely-used cloud computing platform provided by Amazon.com. AWS offers a vast array of cloud services, including computing power, storage solutions, databases, machine learning, analytics, networking, security, and more. AWS allows businesses and individuals to access a flexible, scalable, and cost-effective infrastructure without the need for large upfront investments in physical hardware.
+Put the frame work here
+Containerized applications are applications run in isolated packages of code called containers. Containers include all the dependencies that an application might need to run on any host operating system, such as libraries, binaries, configuration files, and frameworks, into a single lightweight executable.
