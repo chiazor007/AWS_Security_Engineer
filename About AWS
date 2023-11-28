@@ -1,3 +1,39 @@
 Amazon Web Services (AWS) is a comprehensive and widely-used cloud computing platform provided by Amazon.com. AWS offers a vast array of cloud services, including computing power, storage solutions, databases, machine learning, analytics, networking, security, and more. AWS allows businesses and individuals to access a flexible, scalable, and cost-effective infrastructure without the need for large upfront investments in physical hardware.
 Put the frame work here
 Containerized applications are applications run in isolated packages of code called containers. Containers include all the dependencies that an application might need to run on any host operating system, such as libraries, binaries, configuration files, and frameworks, into a single lightweight executable.
+
+GitLab is a web-based platform that provides a set of tools for version control, continuous integration, continuous delivery (CI/CD), and DevOps. It is designed to help development teams collaborate efficiently and manage the software development lifecycle from planning to monitoring. GitLab is often used as a centralized repository for source code management and offers features that support the entire software development process.
+
+Key features of GitLab include:
+
+1. **Version Control (Git Repository):**
+   - GitLab serves as a Git repository hosting service, allowing teams to manage and version control their source code.
+
+2. **Issue Tracking and Project Management:**
+   - GitLab includes tools for issue tracking, project planning, and collaboration. It provides a way for teams to plan, organize, and track work using features such as issues, boards, milestones, and more.
+
+3. **Code Review:**
+   - GitLab facilitates the code review process, allowing developers to submit merge requests (MRs) for changes. Teams can review code, leave comments, and discuss proposed changes before they are merged into the main codebase.
+
+4. **Continuous Integration (CI):**
+   - GitLab includes built-in CI/CD pipelines that automate the process of building, testing, and deploying applications. This helps ensure that changes introduced by developers do not break existing functionality.
+
+5. **Container Registry:**
+   - GitLab provides a container registry for storing and managing Docker images. This is particularly useful for projects that use containerization for deployment.
+
+6. **Wiki and Documentation:**
+   - GitLab includes a built-in wiki for documentation. Teams can create and maintain project documentation, making it accessible alongside the code.
+
+7. **Code Quality and Security Scanning:**
+   - GitLab integrates with various code analysis tools to check for code quality, security vulnerabilities, and potential issues. This helps maintain code quality and identify security risks early in the development process.
+
+8. **Integration with Third-Party Tools:**
+   - GitLab supports integrations with various third-party tools and services, allowing teams to connect their development workflow with other platforms they use.
+
+9. **Monitoring and Logging:**
+   - GitLab provides monitoring and logging features to track the performance and health of applications. It allows teams to monitor metrics and log data directly from within the GitLab interface.
+
+10. **GitLab Runner:**
+    - GitLab Runner is an open-source agent that runs CI/CD jobs. It can be used to execute tasks defined in CI/CD pipelines on local infrastructure.
+
+GitLab is available in different editions, including a free, open-source Community Edition and a more feature-rich Enterprise Edition. Users can choose to self-host GitLab on their infrastructure or use the GitLab.com SaaS platform for cloud-based collaboration. The platform is widely adopted by development teams for its comprehensive set of features that support modern software development practices.
