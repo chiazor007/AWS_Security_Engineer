@@ -1,0 +1,105 @@
+PQL Query to Find IAM Roles with Wildcard Permissions
+
+config from cloud.resource where cloud.type = 'aws' AND api.name = 'aws-iam-get-policy-version' AND json.rule = "document.Statement[*].Effect equals Allow and document.Statement[*].Resource contains '*'"
+
+......................................................................
+
+PQL Query to Find IAM Roles with Wildcard Action ("*" in Actions)
+
+config from cloud.resource where cloud.type = 'aws' AND api.name = 'aws-iam-get-policy-version' AND json.rule = "document.Statement[*].Effect equals Allow and document.Statement[*].Action contains '*'"
+
+......................................................................
+
+PQL Query to Identify IAM Roles Attached to Wildcard Policies
+
+config from cloud.resource where cloud.type = 'aws' AND api.name = 'aws-iam-list-attached-role-policies' AND json.rule = "attachedPolicies[*].policyArn exists"
+
+......................................................................
+
+1. Identify and Prioritize Critical Alerts
+......................................................................
+
+Query to List All Critical Alerts:
+
+event from cloud.audit_logs where severity = 'CRITICAL'
+
+......................................................................
+
+Query for Critical and High Alerts Across Multi-Cloud:
+
+event from cloud.audit_logs where cloud.type in ('aws', 'azure', 'gcp') and severity in ('CRITICAL', 'HIGH')
+
+......................................................................
+
+5. Create Custom Alerts for Specific Security Policies
+......................................................................
+
+Query for IAM Roles with Wildcard Permissions (AWS):
+
+config from cloud.resource where cloud.type = 'aws' and api.name = 'aws-iam-get-policy-version' and json.rule = "document.Statement[*].Effect equals 'Allow' and (document.Statement[*].Action contains '*' or document.Statement[*].Resource contains '*')"
+
+
+......................................................................
+
+Query for Publicly Accessible Databases Across Multi-Cloud:
+
+config from cloud.resource where cloud.type in ('aws', 'azure', 'gcp') and api.name in ('aws-rds-describe-db-instances', 'azure-sql-server-list', 'gcp-sql-instances-list') and json.rule = "publicAccess equals true"
+
+......................................................................
+
+Query for Unencrypted Storage in AWS, Azure, and GCP:
+
+config from cloud.resource where cloud.type in ('aws', 'azure', 'gcp') and resource.type in ('s3', 'storageAccounts', 'cloudStorageBuckets') and json.rule = "encryption not equals true"
+
+......................................................................
+7. Alert Management and Suppression
+......................................................................
+
+Objective:
+Manage alert noise by suppressing low-risk alerts or false positives.
+
+Query to Identify Low-Risk Alerts for Suppression:
+
+event from cloud.audit_logs where severity in ('MEDIUM', 'LOW')
+
+......................................................................
+
+Query to Suppress Alerts for Specific Resource Types:
+
+event from cloud.audit_logs where resource.type in ('ECS Cluster', 'Lambda Function') and severity = 'LOW'
+
+......................................................................
+
+Query to Suppress Alerts for Specific Regions (e.g., Test Regions):
+
+event from cloud.audit_logs where cloud.region in ('us-east-2', 'eu-west-1') and tags.env equals 'test'
+
+......................................................................
+1. Understand and Contextualize Control Tower Roles
+......................................................................
+
+config from cloud.resource where cloud.type = 'aws' and api.name = 'aws-iam-list-roles' and json.rule = "roleName contains 'AWSControlTower'"
+
+
+......................................................................
+2. Review and Assess Role Permissions
+......................................................................
+
+PQL Query to Identify Wildcard Permissions:
+config from cloud.resource where cloud.type = 'aws' and api.name = 'aws-iam-get-policy-version' and json.rule = "document.Statement[*].Effect equals 'Allow' and (document.Statement[*].Action contains '*' or document.Statement[*].Resource contains '*')"
+
+......................................................................
+
+PQL Query to Identify Unused Roles:
+config from cloud.resource where cloud.type = 'aws' and api.name = 'aws-iam-get-role' and json.rule = "roleLastUsedDate does not exist"
+
+
+......................................................................
+Example PQL Query to Find Unused Permissions
+......................................................................
+
+Unused Permissions in AWS IAM Roles:
+
+config from cloud.resource where cloud.type = 'aws' and api.name = 'aws-iam-get-policy-version' and json.rule = "document.Statement[*].Effect equals 'Allow' and document.Statement[*].Action not in ($.cloudTrail.action)"
+
+......................................................................
