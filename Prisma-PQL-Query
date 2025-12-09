@@ -103,3 +103,9 @@ Unused Permissions in AWS IAM Roles:
 config from cloud.resource where cloud.type = 'aws' and api.name = 'aws-iam-get-policy-version' and json.rule = "document.Statement[*].Effect equals 'Allow' and document.Statement[*].Action not in ($.cloudTrail.action)"
 
 ......................................................................
+
+Giving this instance, what are the pros and cons for option 1 and 2? 
+option 1: You can clone the policies and modify the RQL by adding the filter "AND grantedby.cloud.entity.name NOT IN ('test1', 'test2', 'test3')" to create custom policies of your own, disable the existing OOTB policy, and update the Alert Rule to include these new custom policies. This would mean you'd have to create and update any other policies that you do not want these assets to be alerted on.
+
+option 2: You can add a tag to these assets on AWS, add a Tag resource list under settings, and then create/modify the alert rule to auto-dismiss any alerts that match this tag. This would mean the alerts still get generated, but auto-dismissed as soon as they do. 
+
