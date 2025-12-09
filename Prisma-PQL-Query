@@ -109,3 +109,28 @@ option 1: You can clone the policies and modify the RQL by adding the filter "AN
 
 option 2: You can add a tag to these assets on AWS, add a Tag resource list under settings, and then create/modify the alert rule to auto-dismiss any alerts that match this tag. This would mean the alerts still get generated, but auto-dismissed as soon as they do. 
 
+Option 1: Clone Policies and Filter via RQL 
+
+Pros:
+Granular control: excluding only what’s truly needed.
+No alert generation: Prisma won't generate alerts for the excluded roles
+Prevents clutter: Reduces noise at the source, not after the fact.
+Aligns well with governance: Maintains visibility and policy alignment with CIS/NIST/etc. without hiding real risk.
+
+Cons:
+High management overhead: You must clone and maintain each relevant policy.
+Risk of missed updates:	Palo Alto’s OOTB policy updates (unless you re-sync regularly).
+Alert Rule complexity: You need to update your alert rules to use the new clones (e.g., for all cloud types).
+
+Option 2: Tag Assets or resources
+Pros:
+Fast and scalable: Once the tag and rule are in place, it applies to all alerts.
+No policy maintenance: Palo Alto’s updates to OOTB policies wont be missed.
+Automation: Easier to implement in dynamic environments (CloudFormation, Terraform etc)
+
+Cons:
+Alerts still generate: Adds audit clutter.
+Auto-dismiss: This may hide future risk if not properly reviewed.
+Requires tagging discipline: Tagging must be enforced consistently.
+Dismissed alerts may confuse auditors:	Large numbers of dismissed alerts could appear to be ignored or misprioritized if not well documented.
+
