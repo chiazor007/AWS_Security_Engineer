@@ -142,4 +142,43 @@ Status: "IAM (user or role) "progressive", Anomaly "progressive", Attack Path "p
 
 Risk: Vulnerability exploitation​, Misconfiguration, Data loss or exfiltration​, Resource Hijacking, Impact to operations​, High Privilege role, Alignment with groups/teams in ITSM for easy identification of responsibility, Internet Exposure and Privilege Escalation
 
+..............................................
+ChatGPT update
+
+Objective
+
+Establish and maintain continuous security governance across FunaFlex’s cloud infrastructure using Prisma Cloud CSPM.
+Ensure visibility, compliance, and risk reduction by:
+
+⦁	Enforcing cloud security best practices and compliance standards (e.g., CIS Controls v8.1).
+⦁	Coordinating with the IBM Cloud Operations team to evaluate and update configurations, custom policies, and alert rule sets.
+⦁	Continuously monitoring and triaging CSPM alerts to identify false positives, operational requirements, and legitimate risks.
+⦁	Applying appropriate alert handling actions: dismissal, snooze, exception, or exclusion, and escalating high-risk findings to engineering and application owners for remediation.
+
+The ultimate goal is to reduce *** overall cloud security risk while supporting operational efficiency and audit readiness.
+
+.........................
+Current Posture / Status
+
+• IAM (User/Role): Progressive – Monitoring Control Tower roles with scoped policies
+• Anomaly Detection: Progressive – Reviewing unusual behavior and API activity
+• Attack Paths: Progressive – Exposure graphs under review for high-privilege chaining
+• Audit Events: Progressive – Logs exported via alert rules and APIs
+• Configuration: Progressive – Ongoing misconfiguration assessment
+• Network Exposure: Progressive – Triaging internet-exposed assets
+• Compliance Standards: Progressive – Aligned with CIS v8.1; reviewed monthly
+
+.........................
+Key Risk Areas Identified
+
+⦁	Cloud Misconfigurations: Non-compliant resources (e.g., public storage buckets, overly permissive IAM roles).
+⦁	Vulnerability Exploitation: Unpatched container images or third-party libraries detected during scans.
+⦁	Data Loss or Exfiltration: Risks due to exposed services or lack of encryption.
+⦁	Privilege Escalation: IAM roles/users with excessive permissions, including potential admin path chaining.
+⦁	Resource Hijacking: Detection of unauthorized usage (e.g., crypto mining or misuse of compute).
+⦁	Operational Disruption: Unplanned changes or shadow IT resources affecting service integrity.
+⦁	Lack of Accountability Mapping: Gaps in aligning alert ownership with ITSM teams and business units.
+⦁	Internet Exposure: Publicly accessible cloud assets (e.g., EC2, RDS, S3) without proper controls.
+
+
 
