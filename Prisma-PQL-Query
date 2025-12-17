@@ -134,3 +134,12 @@ Auto-dismiss: This may hide future risk if not properly reviewed.
 Requires tagging discipline: Tagging must be enforced consistently.
 Dismissed alerts may confuse auditors:	Large numbers of dismissed alerts could appear to be ignored or misprioritized if not well documented.
 
+......................................................................
+
+Objective: "Secure FunaFlex cloud infrastructure by enforcing governance and compliance standards for clear security visibility in Prisma CSPM. Coordinate with the IBM team to evaluate or update configurations, policies and rule sets. Monitor and triage security findings to define false positive, operational requirements, dismissal, snooze, exception, exclusion or escalate to engineering and app teams for remediation, thereby reducing FunaFlex overall risk."
+
+Status: "IAM (user or role) "progressive", Anomaly "progressive", Attack Path "progressive", Audit Event "progressive", Config "progressive", Network "progressive", Compliance Standard "progressive""
+
+Risk: Vulnerability exploitation​, Misconfiguration, Data loss or exfiltration​, Resource Hijacking, Impact to operations​, High Privilege role, Alignment with groups/teams in ITSM for easy identification of responsibility, Internet Exposure and Privilege Escalation
+
+
